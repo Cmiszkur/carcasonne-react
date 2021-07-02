@@ -1,0 +1,53 @@
+.mainLoginWrapper {
+  max-width: 300px;
+  margin: 10em auto 0em;
+  border: 2px solid #adadad;
+  -webkit-box-shadow: 0px 0px 6px -5px #adadad;
+          box-shadow: 0px 0px 6px -5px #adadad;
+  border-radius: 0.5em;
+  padding: 0em 5em 1.5em;
+}
+
+.mainLoginWrapper .loginHeader h1 {
+  text-align: center;
+  color: #4d4d4d;
+  margin-bottom: 0.8em;
+}
+
+.mainLoginWrapper .loginBody form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mainLoginWrapper .loginBody input {
+  font-size: 1.1em;
+  margin-bottom: 2em;
+  padding: 0.6em;
+  color: #3b3b3b;
+  border-radius: 0.2em;
+  border: 2px solid #adadad;
+  font-weight: 100;
+}
+
+.mainLoginWrapper .loginBody input:focus {
+  outline: none !important;
+  border-color: #C7B742;
+  -webkit-box-shadow: 0px 0px 13px -5px #C7B742;
+          box-shadow: 0px 0px 13px -5px #C7B742;
+}
+
+.mainLoginWrapper .loginBody label {
+  margin-bottom: 0.6em;
+  color: #4d4d4d;
+}
+
+.mainLoginWrapper .loginBody button {
+  width: 100%;
+  margin-left: 0 !important;
+}
+/*# sourceMappingURL=login.css.map */

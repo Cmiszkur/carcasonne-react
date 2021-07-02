@@ -1,0 +1,27 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1.5em;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1000;
+  background-color: white;
+  top: 0;
+}
+
+header .headerItem {
+  margin-right: 1em;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+}
+
+header .headerItem img {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+/*# sourceMappingURL=Header.css.map */

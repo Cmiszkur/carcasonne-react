@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,qBAAqB,CAAC;EAClB,gBAAgB,EAAE,SAAS;EAC3B,OAAO,EAAE,KAAK;EACd,aAAa,EAAE,KAAK;EACpB,aAAa,EAAE,KAAK;EACpB,KAAK,EAAE,OAAO;CAAG",
+    "sources": [
+        "errorMessage.sass",
+        "variables.sass"
+    ],
+    "names": [],
+    "file": "errorMessage.css"
+}

@@ -1,0 +1,82 @@
+@use './variables'
+    
+.mainRegisterWrapper
+    max-width: 300px
+    margin: 10em auto 0em
+    border: 2px solid #adadad
+    box-shadow: 0px 0px 6px -5px #adadad
+    border-radius: 0.5em
+    padding: 0em 5em 1.5em
+
+    .registerHeader
+
+        h1
+            text-align: center
+            color: #4d4d4d
+            margin-bottom: 0.8em
+
+    .registerBody 
+        
+        form
+            display: flex
+            flex-direction: column
+
+        #password
+            margin-bottom: 0.6em !important
+
+        .passwordIndicator
+            width: 100% 
+            margin-bottom: 2em
+
+            .passswordIndicatorBar
+                height: 7px
+                border-radius: 0.2em
+                width: 100% 
+                background-color: #c7c7c7
+                margin-bottom: 0.4em
+
+            .passswordIndicatorProgressBar
+                transition: .3s ease-in-out
+                transition-property: all
+                transition-duration: 0.3s
+                transition-timing-function: ease-in-out
+                transition-delay: 0s
+                height: 100% 
+                border-radius: 0.2em
+
+            .PG25
+                width: 25% 
+                background-color: #A3512A
+
+            .PG50
+                width: 50% 
+                background-color: #C7B742
+
+            .PG75
+                width: 75% 
+                background-color: #90B802
+
+            .passwordIndicatorMessage
+                color: #c7c7c7
+
+        input
+            font-size: 1.1em
+            margin-bottom: 2em
+            padding: 0.6em
+            color: #3b3b3b
+            border-radius: 0.2em
+            border: 2px solid #adadad
+            font-weight: 100
+
+            &:focus
+                outline: none !important
+                border-color: #C7B742
+                box-shadow: 0px 0px 13px -5px #C7B742
+
+        label
+            margin-bottom: 0.6em
+            color: #4d4d4d
+        
+        button
+            width: 100%
+            margin-left: 0 !important
