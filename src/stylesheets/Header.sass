@@ -12,6 +12,55 @@ header
         text-decoration: none
         color: black
         font-size: 1.2em
+        display: inline-flex
+        align-items: center
 
         img
             transform: scale(1.2, 1.2)
+    
+    .LoginButton
+        margin-right: 1em
+        border-radius: 0.8em
+        position: relative
+
+        #login
+            border: 1px solid #878787
+            border-radius: 0.8em 
+            padding: 0.4em 0.6em
+            font-size: 1.1em
+            color: #878787
+            background-color: white
+            margin-right: 0
+            cursor: pointer
+            
+            span
+                margin-right: 0.6em
+            
+            #arrow
+                transition: all 150ms ease-in-out 0s
+                width: 1.1em
+                height: 1.1em
+
+                #path
+                    stroke: #878787
+
+        .outline
+            position: absolute
+            pointer-events: none
+            border-radius: 0.8em 
+            transition: all 150ms ease-in-out 0s
+            inset: 0px
+            z-index: -1
+            
+    .LoginButton:hover .outline
+        transform: scale(1.05, 1.15)
+        background-color: #C7B742
+
+    .LoginButton:hover #login
+        border-color: #C7B742
+
+    .login-modal
+        position: absolute
+        top: calc(100% + 10px)
+        left: calc(100% - 200px)
+

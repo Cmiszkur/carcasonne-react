@@ -2,20 +2,20 @@ import Button from '../components/Button'
 import '../stylesheets/register.css'
 import { useState, useEffect, useRef, FormEvent } from 'react'
 import POST from '../services/POST'
-import RegistrationError from '../components/RegistrationError'
+import RegistrationError from '../components/Error'
 import { useSpring, a } from 'react-spring'
 
-interface responseInterface {
-    body: object,
-    errors: {msg: string}[]
-}
+// interface responseInterface {
+//     body: object,
+//     errors: {msg: string}[]
+// }
 
 function Register() {
 
     const [password, setPassword] = useState('')
     const [progressBarName, setProgressBarName] = useState('')
     const [progressBarMessage, setProgressBarMessage] = useState('Wpisz swoje hasło...')
-    const [errorMessages, setErrorMessages] = useState<{msg: string}[]>([])
+    const [errorMessages, setErrorMessages] = useState<Array<{message: string}>>([])
     const form = useRef<any>()
     const styles = useSpring({
         from: { opacity: 0 },
@@ -23,8 +23,8 @@ function Register() {
         config: {duration: 400}
     })
 
-    const saveErrors = (res: responseInterface | void) => {
-        const errors = res?.errors
+    const saveErrors = (res: Array<{message: string}> | void) => {
+        const errors = res
         if(!!errors) setErrorMessages(errors)
     }
 

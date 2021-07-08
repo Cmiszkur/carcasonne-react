@@ -10,8 +10,14 @@ import MainPage from "./pages/MainPage";
 import Register from './pages/Register'
 import './App.css';
 import Header from './components/Header'
+import { fetchUser } from './redux/reducers/userReducer'
+import { useAppDispatch } from './redux/store'
 
 function App() {
+
+  const dispatch = useAppDispatch()
+  dispatch(fetchUser())
+
   return (
   <main>
 

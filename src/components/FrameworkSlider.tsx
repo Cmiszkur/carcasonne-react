@@ -16,11 +16,7 @@ const FrameworkSlider = () => {
     useEffect(() => {
 
         if(SliderWidth !== undefined && SliderWidth > 0){
-            console.log("wykonało się")
-           
             const firstSlider = document.getElementById('sliderMasterContainer') as HTMLDivElement
-
-            console.log("długość slidera -> " + SliderWidth)
 
             firstSlider.animate([
                 {transform: 'translate(-' + SliderWidth + 'px)' }

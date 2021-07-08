@@ -3,10 +3,11 @@ import { useState, useRef, FormEvent } from 'react'
 import '../stylesheets/login.css'
 import POST from '../services/POST'
 import { useSpring, a } from 'react-spring'
+import LoginError from '../components/Error'
 
 function Login() {
 
-    const [errorMessages, setErrorMessages] = useState({})
+    const [errorMessages, setErrorMessages] = useState<Array<{message: string}>>([])
     const form = useRef<any>()
     const styles = useSpring({
         from: { opacity: 0 },
@@ -14,7 +15,7 @@ function Login() {
         config: {duration: 400}
     })
 
-    const saveErrors = (res: Object | void) => {
+    const saveErrors = (res: Array<{message: string}> | void) => {
         const errors = res
         if(!!errors) setErrorMessages(errors)
     }
@@ -28,7 +29,7 @@ function Login() {
         const plainFormData = Object.fromEntries(data.entries())
 	    const formDataJsonString = JSON.stringify(plainFormData)
 
-        POST('http://localhost:3030/login', formDataJsonString).then(err => saveErrors(err))
+        POST('http://localhost:3030/login', formDataJsonString).then(err => saveErrors([err]))
     }
 
     return (
@@ -37,6 +38,7 @@ function Login() {
             <div className={'loginHeader'}>
                 <h1>Login</h1>
             </div>
+            <LoginError errors = {errorMessages}/>
             {/* <RegistrationError errors = {errorMessages}/> */}
             <div className={'loginBody'}>
                 <form ref={form} method='POST' onSubmit={submitForm}>

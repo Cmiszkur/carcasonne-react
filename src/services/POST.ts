@@ -1,6 +1,6 @@
 const POST = async (url: string, body: string) => {
 
-    const response = await fetch(url, {method: 'POST', body: body, headers: {
+    const response = await fetch(url, {method: 'POST', credentials: "include", body: body, headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"
     }})

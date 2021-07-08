@@ -18,10 +18,74 @@ header .headerItem {
   text-decoration: none;
   color: black;
   font-size: 1.2em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .headerItem img {
   -webkit-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
+}
+
+header .LoginButton {
+  margin-right: 1em;
+  border-radius: 0.8em;
+  position: relative;
+}
+
+header .LoginButton #login {
+  border: 1px solid #878787;
+  border-radius: 0.8em;
+  padding: 0.4em 0.6em;
+  font-size: 1.1em;
+  color: #878787;
+  background-color: white;
+  margin-right: 0;
+  cursor: pointer;
+}
+
+header .LoginButton #login span {
+  margin-right: 0.6em;
+}
+
+header .LoginButton #login #arrow {
+  -webkit-transition: all 150ms ease-in-out 0s;
+  transition: all 150ms ease-in-out 0s;
+  width: 1.1em;
+  height: 1.1em;
+}
+
+header .LoginButton #login #arrow #path {
+  stroke: #878787;
+}
+
+header .LoginButton .outline {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 0.8em;
+  -webkit-transition: all 150ms ease-in-out 0s;
+  transition: all 150ms ease-in-out 0s;
+  inset: 0px;
+  z-index: -1;
+}
+
+header .LoginButton:hover .outline {
+  -webkit-transform: scale(1.05, 1.15);
+          transform: scale(1.05, 1.15);
+  background-color: #C7B742;
+}
+
+header .LoginButton:hover #login {
+  border-color: #C7B742;
+}
+
+header .login-modal {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: calc(100% - 200px);
 }
 /*# sourceMappingURL=Header.css.map */

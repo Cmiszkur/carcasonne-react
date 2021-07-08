@@ -3,7 +3,7 @@ import { FunctionComponent, memo, ReactNode } from 'react'
 import { useTransition, animated } from 'react-spring'
 
 interface propsInterface {
-    errors: {msg: string}[],
+    errors: Array<{message: string}>,
     children?: ReactNode
 }
 
@@ -22,8 +22,8 @@ const RegistrationError: FunctionComponent<propsInterface> = ({errors}): any => 
 
     return transitions(
         (styles, item) => (
-            <animated.div style={styles} key={item.msg} className={'registerErrorWrapper'}>
-                 <span className={'errorMessage'} key={item.msg}>{item.msg}</span>
+            <animated.div style={styles} key={item.message} className={'registerErrorWrapper'}>
+                 <span className={'errorMessage'} key={item.message}>{item.message}</span>
              </animated.div>
         )
     )
